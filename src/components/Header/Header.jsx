@@ -26,6 +26,7 @@ const Header = () => {
   const handleAddPropertyClick = () => {
     if (validateLogin()) {
       setModalOpened(true);
+      setMenuOpen(false);
     }
   };
 
@@ -40,9 +41,16 @@ const Header = () => {
             className={`flexCenter h-menu ${menuOpen ? 'block' : 'hide'}`}
             style={getMenuStyle(menuOpen)}
           >
-            <NavLink to={'/properties'}>Properties</NavLink>
+            <NavLink to={'/properties'} onClick={() => setMenuOpen(false)}>
+              Properties
+            </NavLink>
 
-            <a href="mailto:nwamkwoernest2020@gmail.com">Contact</a>
+            <a
+              href="mailto:nwamkwoernest2020@gmail.com"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </a>
 
             {/* add property */}
 
@@ -57,7 +65,11 @@ const Header = () => {
                 Login
               </button>
             ) : (
-              <ProfileMenu user={user} logout={logout} />
+              <ProfileMenu
+                user={user}
+                logout={logout}
+                setMenuOpen={setMenuOpen}
+              />
             )}
           </div>
         </OutsideClickHandler>

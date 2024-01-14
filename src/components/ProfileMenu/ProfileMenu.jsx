@@ -3,7 +3,7 @@ import './ProfileMenu.css';
 import { useNavigate } from 'react-router-dom';
 import UserDetailsContext from '../../context/UserDetailsContext';
 
-const ProfileMenu = ({ user, logout }) => {
+const ProfileMenu = ({ user, logout, setMenuOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -23,6 +23,7 @@ const ProfileMenu = ({ user, logout }) => {
             onClick={() => {
               navigate('../favourites', { replace: true });
               setIsOpen(false);
+              setMenuOpen(false);
             }}
           >
             Favorites
@@ -31,6 +32,7 @@ const ProfileMenu = ({ user, logout }) => {
             onClick={() => {
               navigate('../bookings', { replace: true });
               setIsOpen(false);
+              setMenuOpen(false);
             }}
           >
             Bookings
@@ -40,6 +42,8 @@ const ProfileMenu = ({ user, logout }) => {
             onClick={() => {
               localStorage.clear();
               logout();
+              setIsOpen(false);
+              setMenuOpen(false);
             }}
           >
             Logout
