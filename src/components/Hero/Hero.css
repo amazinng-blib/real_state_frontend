@@ -45,8 +45,22 @@
   border: 3px solid rgba(120, 120, 120, 0.374);
   padding: 0.5rem 1rem;
   justify-content: space-between;
-  width: 100%;
+  width: clamp(12rem, 100%, 28rem);
+  flex-wrap: nowrap;
 }
+
+/* .hero-container .search-bar {
+  width: clamp(12rem, 100%, 28rem);
+  border-radius: 30px;
+  border: 1px solid rgba(120, 120, 120, 0.374);
+  flex-wrap: nowrap;
+}
+
+.hero-container .search-bar .button {
+  border-radius: 30px;
+  font-size: 12px;
+  cursor: pointer;
+} */
 
 .search-bar > input {
   border: none;
@@ -111,5 +125,12 @@
 
   .stat > :nth-child(2) {
     font-size: 0.8rem;
+  }
+
+  .search-bar {
+    padding: 0.5rem;
+  }
+  .search-bar > input::placeholder {
+    font-size: 14px;
   }
 }
