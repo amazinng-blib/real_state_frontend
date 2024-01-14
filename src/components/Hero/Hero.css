@@ -114,6 +114,7 @@
   }
 
   .search-bar {
+    width: 100%;
     display: grid;
     grid-template-columns: 0.5rem auto 5rem;
     justify-content: space-between;
