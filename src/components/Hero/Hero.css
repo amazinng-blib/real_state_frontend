@@ -131,4 +131,8 @@
   .search-bar > input::placeholder {
     font-size: 14px;
   }
+
+  .search-bar > input {
+    width: 80%;
+  }
 }
