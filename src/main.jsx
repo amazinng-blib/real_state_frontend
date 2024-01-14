@@ -14,9 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       domain="dev-tyma42jam5zi8k52.us.auth0.com"
       clientId="2K4mgieH3QYf8Iv3FJEQf95N2GVM6aH6"
       authorizationParams={{
-        redirect_uri: 'http://localhost:5173',
+        redirect_uri: 'https://real-state-frontend-iota.vercel.app',
       }}
-      audience="http://localhost:8000"
+      audience="https://real-state-backend-phi.vercel.app"
       scope="openid profile email"
     >
       <MantineProvider>
