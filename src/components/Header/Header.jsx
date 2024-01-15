@@ -12,7 +12,7 @@ const Header = () => {
   const [modalOpened, setModalOpened] = useState(false);
 
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
-  console.log({ user });
+  // console.log({ user });
 
   const getMenuStyle = (menuOpen) => {
     if (document.documentElement.clientWidth <= 800) {
